@@ -6,13 +6,15 @@
 
 int main(int argc, char **argv)
 {
+    padConfigureInput(1, HidNpadStyleSet_NpadStandard);
     PadState pad;
     padInitializeDefault(&pad);
 
     Framebuffer fb;
     framebufferCreate(&fb, nwindowGetDefault(), FB_WIDTH, FB_HEIGHT, PIXEL_FORMAT_RGBA_8888, 2);
     framebufferMakeLinear(&fb);
-
+    
+    // for some reason there's less cpu load when looping the framebuffer, idk why, but it works!
     while (appletMainLoop())
     {
         padUpdate(&pad);

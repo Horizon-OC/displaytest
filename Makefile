@@ -42,7 +42,8 @@ BUILD		:=	build
 SOURCES		:=	source
 DATA		:=	data
 INCLUDES	:=	include
-#ROMFS	:=	romfs
+APP_AUTHOR  := Souldbminer
+APP_VERSION := 1.0.1
 
 #---------------------------------------------------------------------------------
 # options for code generation
